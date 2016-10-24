@@ -1,0 +1,56 @@
+<!-- Version 1
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="people">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="person" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="firstname"/>
+              <xs:element type="xs:string" name="lastname"/>
+              <xs:element type="xs:string" name="birthdate"/>
+              <xs:element name="healthprofile">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="lastupdate"/>
+                    <xs:element type="xs:float" name="weight"/>
+                    <xs:element type="xs:float" name="height"/>
+                    <xs:element type="xs:float" name="bmi"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:byte" name="id" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema> -->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="people" type="peopleType"/>
+	<xsd:complexType name="peopleType">
+		<xsd:sequence>
+	    	<xsd:element ref="person"  minOccurs="0" maxOccurs="unbounded"/>
+	    </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="person" type="personType"/>
+    <xsd:complexType name="personType">
+	    <xsd:sequence>
+	      <xsd:element name="firstname" type="xsd:string"/>
+	      <xsd:element name="lastname" type="xsd:string"/>
+	      <xsd:element name="birtday" type="xsd:date"/>
+	      <xsd:element name="healthprofile" type="healthProfileType"/>
+	    </xsd:sequence>
+	    <xsd:attribute name="id" type="xsd:long"/>
+    </xsd:complexType>
+    <xsd:complexType name="healthProfileType">
+	    <xsd:sequence>
+	      <xsd:element name="lastupdate" type="xsd:date"/>
+	      <xsd:element name="weight" type="xsd:long"/>
+	      <xsd:element name="height" type="xsd:long"/>
+	      <xsd:element name="bmi" type="xsd:long"/>
+	    </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
