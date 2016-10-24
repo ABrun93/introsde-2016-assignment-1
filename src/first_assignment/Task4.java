@@ -37,7 +37,7 @@ public class Task4 {
         Marshaller m = jc.createMarshaller();
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         
-        m.marshal(database,new File("file/people.xml"));
+        m.marshal(database,new File("marshaller_people.xml"));
         m.marshal(database, System.out);
 	}
 

@@ -45,7 +45,7 @@ public class Task6 {
 
         String result = mapper.writeValueAsString(database);
         System.out.println(result);
-        mapper.writeValue(new File("file/people.json"), database);	
+        mapper.writeValue(new File("marshaller_people.json"), database);	
 	}
 
 }
