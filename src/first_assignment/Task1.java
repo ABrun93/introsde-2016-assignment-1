@@ -18,8 +18,7 @@ public class Task1
 
 	public static void main(String[] args) throws Exception
 	{
-		String fileXml, id, fname, lname, birthday, weight, height;
-		fileXml = "people.xml";
+		String fileXml = "people.xml";
 		
 		DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
 	    domFactory.setNamespaceAware(true);

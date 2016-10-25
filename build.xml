@@ -147,6 +147,18 @@
         <echo message = "============================================================================================" />
 	</target>
 
+	<target name="execute.laboratory">
+		<echo message="Executing GetHeightAndWeight: give the id print height and weight of person" />
+		<java classname="laboratory.GetHeightAndWeight" classpath="${build.dir}">
+			<classpath>
+				<fileset dir="${lib.dir}">
+					<include name="**/*.jar" />
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+		</java>
+	</target>
+	
 	<target name="execute.Task1">
 		<echo message="Executing Task1: print list of people with all details" />
 		<java classname="first_assignment.Task1" classpath="${build.dir}">

@@ -3,10 +3,11 @@ Delivery of the first assignment of introsde 2016
 
 
 ## Structure of project
-The project is composed of six main classes, one for each request of delivery, plus three classes for the representation of the data, all contained in the src folder. The tasks classes are stored in the *first_assignment* package, while the classes of representation of data are in the *model* package.
+The project is composed of six main classes, one for each request of delivery, plus three classes for the representation of the data and one class for the functions based on the labs, all contained in the src folder. The tasks classes are stored in the *first_assignment* package, while the classes of representation of data are in the *model* package and the others functions are in *laboratory*.
 
 * __src/__
   * *first_assignment*
+    * _LabBased.java_ : give the id print height and weight of person 
     * _Task1.java_ : print the list of people with all details
     * _Task2.java_ : print the healt profile of a person with the specified id
     * _Task3.java_ : print person with some condition on weight
