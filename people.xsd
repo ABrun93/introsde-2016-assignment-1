@@ -40,17 +40,17 @@
 	    <xsd:sequence>
 	      <xsd:element name="firstname" type="xsd:string"/>
 	      <xsd:element name="lastname" type="xsd:string"/>
-	      <xsd:element name="birtday" type="xsd:date"/>
+	      <xsd:element name="birthdate" type="xsd:dateTime"/>
 	      <xsd:element name="healthprofile" type="healthProfileType"/>
 	    </xsd:sequence>
 	    <xsd:attribute name="id" type="xsd:long"/>
     </xsd:complexType>
     <xsd:complexType name="healthProfileType">
 	    <xsd:sequence>
-	      <xsd:element name="lastupdate" type="xsd:date"/>
-	      <xsd:element name="weight" type="xsd:long"/>
-	      <xsd:element name="height" type="xsd:long"/>
-	      <xsd:element name="bmi" type="xsd:long"/>
+	      <xsd:element name="lastupdate" type="xsd:dateTime"/>
+	      <xsd:element name="weight" type="xsd:decimal"/>
+	      <xsd:element name="height" type="xsd:decimal"/>
+	      <xsd:element name="bmi" type="xsd:decimal"/>
 	    </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>
